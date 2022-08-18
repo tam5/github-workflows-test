@@ -31,3 +31,5 @@ jobs:
           draft: false
           prerelease: false
 
+      - name: Update Changelog
+        uses: laravel/.github/.github/workflows/update-changelog.yml@main
