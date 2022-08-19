@@ -17,16 +17,29 @@ jobs:
         id: generate_changelog
         uses: metcalfc/changelog-generator@v3.0.0
         with:
-          myToken: ${{ secrets.GH_ACTIONS_PAT }}
+          myToken: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Release
         id: create_release
         uses: actions/create-release@latest
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_ACTIONS_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
           body: ${{ steps.generate_changelog.outputs.changelog }}
           draft: false
           prerelease: false
+
+      - name: Extract release date from git tag
+        id: extract_release_date
+        run: |
+          echo "::set-output name=date::$(git log -1 --date=short --format=%ad '${{ github.ref }}')"
+
+      - name: Update Changelog
+        uses: stefanzweifel/changelog-updater-action@v1
+        with:
+          # Pass extracted release date, release notes and version to the Action.
+          release-date: ${{ steps.extract_release_date.outputs.date }}
+          release-notes: ${{ steps.generate_changelog.outputs.changelog }}
+          latest-version: ${{ github.ref }}
