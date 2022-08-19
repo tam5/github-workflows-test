@@ -17,20 +17,16 @@ jobs:
         id: generate_changelog
         uses: metcalfc/changelog-generator@v3.0.0
         with:
-          myToken: ${{ secrets.GITHUB_TOKEN }}
+          myToken: ${{ secrets.GITHUB_ACTIONS_PAT }}
 
       - name: Create Release
         id: create_release
         uses: actions/create-release@latest
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_ACTIONS_PAT }}
         with:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
           body: ${{ steps.generate_changelog.outputs.changelog }}
           draft: false
           prerelease: false
-
-  update-changelog:
-    uses: laravel/.github/.github/workflows/update-changelog.yml@main
-    needs: release
