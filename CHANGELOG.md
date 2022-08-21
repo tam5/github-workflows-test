@@ -1,6 +1,11 @@
 # Changelog
 
-## [Unreleased](https://github.com/org/repo/compare/v2.1.2...main)
+## [Unreleased](https://github.com/org/repo/compare/v2.1.3...main)
+
+## [v2.1.3](https://github.com/org/repo/compare/v2.1.2...v2.1.3) - 2022-08-21
+
+- [f3c57d2](http://github.com/tam5/github-workflows-test/commit/f3c57d2e3ab1c4b9c6f7e0db7cb0782778de14cd) - add mokre
+- [c1b1c58](http://github.com/tam5/github-workflows-test/commit/c1b1c5810cc99958930ea66e9be5ed621e33481b) - docs: update CHANGELOG
 
 ## [v2.1.2](https://github.com/org/repo/compare/v2.1.1...v2.1.2) - 2022-08-21
 
