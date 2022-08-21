@@ -1,5 +1,7 @@
 # Changelog
 
+## [Unreleased](https://github.com/org/repo/compare/v2.1.1...HEAD)
+
 ## v2.1.1 - 2022-08-21
 
 - [1ce2bf6](http://github.com/tam5/github-workflows-test/commit/1ce2bf6ede76fb768edb368cb9de70c4596dbec6) - switch to undeprecated releaser
