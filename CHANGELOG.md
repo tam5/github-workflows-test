@@ -1,23 +1,18 @@
 # Changelog
 
-## [Unreleased](https://github.com/org/repo/compare/v2.1.56...main)
+## [Unreleased](https://github.com/tam5/github-workflows-test/compare/v2.1.5...main)
 
-## [v2.1.56](https://github.com/org/repo/compare/v2.1.5...v2.1.56) - 2022-08-21
-
-- [1049a92](http://github.com/tam5/github-workflows-test/commit/1049a92bec70326c70d5f33d0d38d647a3bbb5ec) - remove this
-- [6ec5fe7](http://github.com/tam5/github-workflows-test/commit/6ec5fe76fa33b75e1b47833c35da454574e76ee9) - docs: update CHANGELOG
-
-## [v2.1.5](https://github.com/org/repo/compare/v2.1.3...v2.1.5) - 2022-08-21
+## [v2.1.5](https://github.com/tam5/github-workflows-test/compare/v2.1.3...v2.1.5) - 2022-08-21
 
 - [6e62992](http://github.com/tam5/github-workflows-test/commit/6e62992938dcc30cb2e706a14db93def0c192d44) - fix links
 - [080ebcc](http://github.com/tam5/github-workflows-test/commit/080ebcc9e0f3e52db8ff2442e0db1892eb978499) - docs: update CHANGELOG
 
-## [v2.1.3](https://github.com/org/repo/compare/v2.1.2...v2.1.3) - 2022-08-21
+## [v2.1.3](https://github.com/tam5/github-workflows-test/compare/v2.1.2...v2.1.3) - 2022-08-21
 
 - [f3c57d2](http://github.com/tam5/github-workflows-test/commit/f3c57d2e3ab1c4b9c6f7e0db7cb0782778de14cd) - add mokre
 - [c1b1c58](http://github.com/tam5/github-workflows-test/commit/c1b1c5810cc99958930ea66e9be5ed621e33481b) - docs: update CHANGELOG
 
-## [v2.1.2](https://github.com/org/repo/compare/v2.1.1...v2.1.2) - 2022-08-21
+## [v2.1.2](https://github.com/tam5/github-workflows-test/compare/v2.1.1...v2.1.2) - 2022-08-21
 
 - [8c651c4](http://github.com/tam5/github-workflows-test/commit/8c651c4a93e500cbf84a494b3851ad9c0d50de53) - try keep changelog format
 - [4229403](http://github.com/tam5/github-workflows-test/commit/4229403224b20ae8c0c64915a7b566d490a0f165) - docs: update CHANGELOG
