@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/org/repo/compare/v2.1.2...main)
+## [Unreleased](https://github.com/tam5/repo/github-workflow-test/v2.1.2...main)
 
-## [v2.1.2](https://github.com/org/repo/compare/v2.1.1...v2.1.2) - 2022-08-21
+## [v2.1.2](https://github.com/tam5/repo/github-workflow-test/v2.1.1...v2.1.2) - 2022-08-21
 
 - [8c651c4](http://github.com/tam5/github-workflows-test/commit/8c651c4a93e500cbf84a494b3851ad9c0d50de53) - try keep changelog format
 - [4229403](http://github.com/tam5/github-workflows-test/commit/4229403224b20ae8c0c64915a7b566d490a0f165) - docs: update CHANGELOG
