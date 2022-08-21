@@ -1,6 +1,13 @@
 # Changelog
 
-## [Unreleased](https://github.com/tam5/github-workflows-test/compare/v2.1.5...main)
+## [Unreleased](https://github.com/tam5/github-workflows-test/compare/v2.2.0...main)
+
+## [v2.2.0](https://github.com/tam5/github-workflows-test/compare/v2.1.5...v2.2.0) - 2022-08-21
+
+- [e6defd6](http://github.com/tam5/github-workflows-test/commit/e6defd69a41e89b7bb5e29cb013f631bee2fd3ee) - Merge pull request #1 from tam5/feature
+- [4b38c6e](http://github.com/tam5/github-workflows-test/commit/4b38c6e112a1ea9ea12d91794857f0e03b717e9b) - chore: fix changelog
+- [205e6af](http://github.com/tam5/github-workflows-test/commit/205e6af4c32c960d4320b10935ad2d74d76ba3b3) - feat: change something
+- [e8306e2](http://github.com/tam5/github-workflows-test/commit/e8306e26e8df2ce26920ca6186aa13f6041cadf3) - docs: update CHANGELOG
 
 ## [v2.1.5](https://github.com/tam5/github-workflows-test/compare/v2.1.3...v2.1.5) - 2022-08-21
 
