@@ -51,6 +51,5 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           # Push updated CHANGELOG to release target branch.
-          branch: ${{ steps.extract_info.outputs.commitish }}
           commit_message: "docs: update CHANGELOG"
           file_pattern: CHANGELOG.md
