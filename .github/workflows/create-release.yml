@@ -35,15 +35,9 @@ jobs:
 
       - name: Create Release
         id: create_release
-        uses: actions/create-release@latest
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ steps.extract_info.outputs.tag_name }}
-          release_name: ${{ steps.extract_info.outputs.tag_name }}
           body: ${{ steps.generate_changelog.outputs.changelog }}
-          draft: false
-          prerelease: false
 
       - name: Update Changelog
         uses: stefanzweifel/changelog-updater-action@v1
