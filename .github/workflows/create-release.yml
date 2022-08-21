@@ -51,7 +51,7 @@ jobs:
           echo "show me all - $(git log -1 --pretty='%D')"
           echo "contains - $(git branch -a --contains ${{github.ref}})"
           echo "maybe - $(git log -1  --format='%D' | awk '{ print $NF }')"
-          echo "sed it - $(git log -1  --format='%D' | awk '{ print $NF }' | sed sed 's#origin/##g')"
+          echo "sed it - $(git log -1  --format='%D' | awk '{ print $NF }' | sed 's#origin/##g')"
 
       # - name: Extract info from git tag
       #   id: extract_info
