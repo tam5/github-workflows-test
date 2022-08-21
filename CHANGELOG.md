@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.1.0 - 2022-08-21
+
+- [6b436ed](http://github.com/tam5/github-workflows-test/commit/6b436ed7be24d58e73312448f608ff97e8170d24) - it works
+- [ce914d5](http://github.com/tam5/github-workflows-test/commit/ce914d549e85d4481f7243c3b2f1f70f12516ba3) - docs: update CHANGELOG
+
 ## v2.0.12 - 2022-08-21
 
 - [539cf9f](http://github.com/tam5/github-workflows-test/commit/539cf9f9c8efdbcf0ca0b9cb04489f7e421ddfd1) - fix typo
