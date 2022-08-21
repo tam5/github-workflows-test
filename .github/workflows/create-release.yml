@@ -20,59 +20,44 @@ jobs:
           # is not out of date.
           ref: ${{ github.ref }}
 
+      - name: Extract info from git tag
+        id: extract_info
+        run: |
+          echo "::set-output name=tag_name::${GITHUB_REF/refs\/tags\//}"
+          echo "::set-output name=tag_date::$(git log -1 --date=short --format=%ad '${{ github.ref }}')"
+          echo "::set-output name=target_commitish::$(git log -1  --format='%D' | awk '{ print $NF }' | sed 's#origin/##g')"
+
       - name: Generate Changelog
         id: generate_changelog
         uses: metcalfc/changelog-generator@v3.0.0
         with:
           myToken: ${{ secrets.GITHUB_TOKEN }}
 
-      # - name: Create Release
-      #   id: create_release
-      #   uses: actions/create-release@latest
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #   with:
-      #     tag_name: ${{ github.ref }}
-      #     release_name: ${{ github.ref }}
-      #     body: ${{ steps.generate_changelog.outputs.changelog }}
-      #     draft: false
-      #     prerelease: false
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.extract_info.tag_name }}
+          release_name: ${{ steps.extracT_info.tag_name }}
+          body: ${{ steps.generate_changelog.outputs.changelog }}
+          draft: false
+          prerelease: false
 
-      - name: Print slug/short variables
-        run: |
-          echo "Debug me"
-          echo "github.ref - ${{ github.ref }}"
-          echo "GITHUB_REF - ${GITHUB_REF}"
-          echo "tag_name - ${GITHUB_REF/refs\/tags\//}"
-          echo "head_ref - ${{ github.head_ref }}"
-          echo "base_ref - ${{ github.base_ref }}"
-          echo "committish - $(git rev-parse --abbrev-ref $(git name-rev --name-only --exclude="tags/*" ${{ github.ref }}))"
-          echo "no abbrev - $(git rev-parse $(git name-rev --name-only --exclude="tags/*" ${{ github.ref }}))"
-          echo "show me all - $(git log -1 --pretty='%D')"
-          echo "contains - $(git branch -a --contains ${{github.ref}})"
-          echo "maybe - $(git log -1  --format='%D' | awk '{ print $NF }')"
-          echo "sed it - $(git log -1  --format='%D' | awk '{ print $NF }' | sed 's#origin/##g')"
+      - name: Update Changelog
+        uses: stefanzweifel/changelog-updater-action@v1
+        with:
+          # Pass extracted release date, release notes and version to the Action.
+          release-date: ${{ steps.extract_info.outputs.tag_date }}
+          release-notes: ${{ steps.generate_changelog.outputs.changelog }}
+          latest-version: ${{ steps.extract_info.outputs.tag_name }}
+          compare-url-target-revision: ${{ steps.extract_info.outputs.target_commitish }}
 
-      # - name: Extract info from git tag
-      #   id: extract_info
-      #   run: |
-      #     echo "::set-output name=date::$(git log -1 --date=short --format=%ad '${{ github.ref }}')"
-      #     echo "::set-output name=commitish::$(git rev-parse --abbrev-ref $(git name-rev --name-only --exclude="tags/*" ${{ github.ref }}))"
-      #     echo ::set-output name=tag_name::${GITHUB_REF/refs\/tags\//}
-
-      # - name: Update Changelog
-      #   uses: stefanzweifel/changelog-updater-action@v1
-      #   with:
-      #     # Pass extracted release date, release notes and version to the Action.
-      #     release-date: ${{ steps.extract_info.outputs.date }}
-      #     release-notes: ${{ steps.generate_changelog.outputs.changelog }}
-      #     latest-version: ${{ steps.extract_info.outputs.tag_name }}
-      #     compare-url-target-revision: ${{ steps.extract_info.outputs.commitish }}
-
-      # - name: Commit updated CHANGELOG
-      #   uses: stefanzweifel/git-auto-commit-action@v4
-      #   with:
-      #     # Push updated CHANGELOG to release target branch.
-      #     branch: ${{ steps.extract_info.outputs.commitish }}
-      #     commit_message: "docs: update CHANGELOG"
-      #     file_pattern: CHANGELOG.md
+      - name: Commit updated CHANGELOG
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          # Push updated CHANGELOG to release target branch.
+          branch: ${{ steps.extract_info.outputs.target_commitish }}
+          commit_message: "docs: update CHANGELOG"
+          file_pattern: CHANGELOG.md
