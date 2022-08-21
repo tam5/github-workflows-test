@@ -35,7 +35,7 @@ jobs:
         id: extract_info
         run: |
           echo "::set-output name=date::$(git log -1 --date=short --format=%ad '${{ github.ref }}')"
-          echo "::set-output name=commitish::$(git name-rev --name-only --exclude="tags/*" ${{ github.ref }})"
+          echo "::set-output name=commitish::$(git rev-parse --abbrev-ref $(git name-rev --name-only --exclude="tags/*" ${{ github.ref }}))"
           echo ::set-output name=tag_name::${GITHUB_REF/refs\/tags\//}
 
       - name: Update Changelog
