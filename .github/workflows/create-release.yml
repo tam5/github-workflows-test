@@ -55,3 +55,15 @@ jobs:
           branch: ${{ steps.extract_info.outputs.target_commitish }}
           commit_message: "docs: update CHANGELOG"
           file_pattern: CHANGELOG.md
+
+      - name: "release_compare_url"
+        # https://github.com/org/repo/compare/v1.0.0...v1.1.0
+        run: "echo ${{ steps.changelog-updater.outputs.release_compare_url }}"
+
+      - name: "release_url_fragment"
+        # #v100---2021-02-01
+        run: "echo ${{ steps.changelog-updater.outputs.release_url_fragment }}"
+
+      - name: "unreleased_compare_url"
+        # https://github.com/org/repo/compare/v1.0.0...HEAD
+        run: "echo ${{ steps.changelog-updater.outputs.unreleased_compare_url }}"
