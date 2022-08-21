@@ -11,7 +11,14 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
+        with:
+          # Fetch entire history of repository to ensure relase date can be
+          # extracted from commit of the given tag.
+          fetch-depth: 0
+          # Checkout target branch of this release. Ensures that the CHANGELOG
+          # is not out of date.
+          ref: ${{ github.ref }}
 
       - name: Generate Changelog
         id: generate_changelog
@@ -40,6 +47,7 @@ jobs:
           echo "head_ref - ${{ github.head_ref }}"
           echo "base_ref - ${{ github.base_ref }}"
           echo "committish - $(git rev-parse --abbrev-ref $(git name-rev --name-only --exclude="tags/*" ${{ github.ref }}))"
+          echo "show me all - $(git log -1)"
           echo "maybe - $(git log -1  --format='%D' | awk '{ print $NF }')"
 
       # - name: Extract info from git tag
