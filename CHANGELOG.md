@@ -1,6 +1,11 @@
 # Changelog
 
-## [Unreleased](https://github.com/org/repo/compare/v2.1.3...main)
+## [Unreleased](https://github.com/org/repo/compare/v2.1.5...main)
+
+## [v2.1.5](https://github.com/org/repo/compare/v2.1.3...v2.1.5) - 2022-08-21
+
+- [6e62992](http://github.com/tam5/github-workflows-test/commit/6e62992938dcc30cb2e706a14db93def0c192d44) - fix links
+- [080ebcc](http://github.com/tam5/github-workflows-test/commit/080ebcc9e0f3e52db8ff2442e0db1892eb978499) - docs: update CHANGELOG
 
 ## [v2.1.3](https://github.com/org/repo/compare/v2.1.2...v2.1.3) - 2022-08-21
 
