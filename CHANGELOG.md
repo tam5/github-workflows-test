@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.1.1 - 2022-08-21
+
+- [1ce2bf6](http://github.com/tam5/github-workflows-test/commit/1ce2bf6ede76fb768edb368cb9de70c4596dbec6) - switch to undeprecated releaser
+- [1f14d27](http://github.com/tam5/github-workflows-test/commit/1f14d27854cd31ae16e4034db47cc941260e2fcd) - docs: update CHANGELOG
+
 ## v2.1.0 - 2022-08-21
 
 - [6b436ed](http://github.com/tam5/github-workflows-test/commit/6b436ed7be24d58e73312448f608ff97e8170d24) - it works
