@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://github.com/tam5/github-workflows-test/compare/v2.3.0...v3.0.0) (2022-08-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* break everything
+
+### Features
+
+* break everything ([7d2f9f2](https://github.com/tam5/github-workflows-test/commit/7d2f9f2ce1e3d54cb8901c21cebb375fdcaafa65))
+
 ## [2.3.0](https://github.com/tam5/github-workflows-test/compare/v2.2.0...v2.3.0) (2022-08-22)
 
 
