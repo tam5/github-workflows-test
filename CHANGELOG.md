@@ -1,5 +1,26 @@
 # Changelog
 
+## [2.3.0](https://github.com/tam5/github-workflows-test/compare/v2.2.0...v2.3.0) (2022-08-22)
+
+
+### Features
+
+* add config file ([b7461f7](https://github.com/tam5/github-workflows-test/commit/b7461f76cf1b3df6a8c70c0e9f3053375bb96d19))
+* make a change ([e5c2605](https://github.com/tam5/github-workflows-test/commit/e5c26053784614769a0867f36c5640c6098d4049))
+* make another change ([a2b8110](https://github.com/tam5/github-workflows-test/commit/a2b811006da038afed9a89c19401e59ead2f3c08))
+* **MT-123:** make another change ([75086cc](https://github.com/tam5/github-workflows-test/commit/75086ccdc1ff11c628368ab0bf3d0d18ba8e4bf1))
+* **MT-123:** make another change to fix things ([4d82074](https://github.com/tam5/github-workflows-test/commit/4d82074da7c5bd6d4d804b3962024832697bb9bd))
+* try out release drafter ([2ed2807](https://github.com/tam5/github-workflows-test/commit/2ed2807c548f22fe8020e7860c753643ce04b8d4))
+* try release-please ([af26554](https://github.com/tam5/github-workflows-test/commit/af2655402443c78ab40a23dc6667b46c5f3d814b))
+* try to change something ([199204b](https://github.com/tam5/github-workflows-test/commit/199204b3cf8fdc3c287cce7ca0bb609f1408e3a9))
+
+
+### Bug Fixes
+
+* **MT-123:** make another change to fix things ([ccbf745](https://github.com/tam5/github-workflows-test/commit/ccbf7450103e9b1e8544903f51ce104dd1e6387f))
+* update name for config file ([4c87a2b](https://github.com/tam5/github-workflows-test/commit/4c87a2b04c12cd6c6b11290d007e1bc25cc26168))
+* update name for config file ([a8000a1](https://github.com/tam5/github-workflows-test/commit/a8000a1500dc68f22af42b5eeae6b52248038616))
+
 ## [Unreleased](https://github.com/tam5/github-workflows-test/compare/v2.2.0...main)
 
 ## [v2.2.0](https://github.com/tam5/github-workflows-test/compare/v2.1.5...v2.2.0) - 2022-08-21
