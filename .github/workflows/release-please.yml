@@ -7,6 +7,6 @@ name: release-please
 
 jobs:
   release-please:
-    uses: tam5/.github/.github/workflows/release-please.yml
+    uses: tam5/.github/.github/workflows/release-please.yml@main
     with:
       release-type: simple
