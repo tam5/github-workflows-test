@@ -7,10 +7,6 @@ name: release-please
 
 jobs:
   release-please:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: google-github-actions/release-please-action@v3
-        with:
-          release-type: simple
-          package-name: release-please-action
+    uses: tam5/.github/.github/workflows/release-please.yml
+    with:
+      release-type: simple
