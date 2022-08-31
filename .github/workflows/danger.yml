@@ -5,3 +5,4 @@ name: danger
 jobs:
   danger:
     uses: tam5/.github/.github/workflows/danger.yml@main
+    secrets: inherit
