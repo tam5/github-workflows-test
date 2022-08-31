@@ -1,0 +1,9 @@
+on:
+  push:
+
+name: commit-test
+
+jobs:
+  danger:
+    uses: tam5/.github/.github/workflows/commitlint-commits.yml@main
+    secrets: inherit
